@@ -11,6 +11,9 @@ const {PORT} = require('./config')
 const userRuta = require('./routes/api/user')
 app.use('/api/user', userRuta)
 
+const apuestasRuta = require('./routes/api/apuestas')
+app.use('/api/apuestas', apuestasRuta)
+
 if(process.env.NODE_ENV === 'production'){
     app.use(history({verbose: true}))
 }
